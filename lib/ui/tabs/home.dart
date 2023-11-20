@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:just_audio/just_audio.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -20,6 +21,14 @@ class _HomeScreenState extends State<HomeScreen> {
           onTap: () async {
             print(
                 'https://cdn.pixabay.com/photo/2016/04/07/22/09/note-1314941_1280.png');
+            
+            final player = AudioPlayer(); // Create a player
+            final duration = await player.setUrl(// Load a URL
+            
+                'https://pub-7de58e77bbdc477680e9cd9b28c977e3.r2.dev/Rick%20Roll%20Sound%20Effect.mp3'); // Schemes: (https: | file: | asset: )
+             await player.setSpeed(.5); 
+            player.play();
+                 
           },
         ),
       ),
@@ -30,8 +39,13 @@ class _HomeScreenState extends State<HomeScreen> {
             'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJBP5pyU3cNmd1LYQOz87cH03fPTSzZM0J4A&usqp=CAU'),
         child: InkWell(
           onTap: () async {
-            print(
-                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJBP5pyU3cNmd1LYQOz87cH03fPTSzZM0J4A&usqp=CAU');
+            print('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJBP5pyU3cNmd1LYQOz87cH03fPTSzZM0J4A&usqp=CAU');
+            final player = AudioPlayer(); // Create a player
+            final duration = await player.setUrl(// Load a URL
+                'https://pub-7de58e77bbdc477680e9cd9b28c977e3.r2.dev/Rick%20Roll%20Sound%20Effect.mp3'); // Schemes: (https: | file: | asset: )
+             await player.setSpeed(.5); 
+            player.play();
+           
           },
         ),
       ),
@@ -44,6 +58,11 @@ class _HomeScreenState extends State<HomeScreen> {
           onTap: () async {
             print(
                 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjjv-dVvwKy0q7tjhNH2oIcDIiTk-a3jSGOQ&usqp=CAU');
+                final player = AudioPlayer(); // Create a player
+            final duration = await player.setUrl(// Load a URL
+                'https://pub-7de58e77bbdc477680e9cd9b28c977e3.r2.dev/Rick%20Roll%20Sound%20Effect.mp3'); // Schemes: (https: | file: | asset: )
+             await player.setSpeed(.5); 
+             player.play();
           },
         ),
       ),
@@ -56,7 +75,12 @@ class _HomeScreenState extends State<HomeScreen> {
           onTap: () async {
             print(
                 'https://iolani-school-campus-store.myshopify.com/cdn/shop/products/decal-is09-shield-cut-letter_370x.png?v=1601070689');
-          },
+         final player = AudioPlayer(); // Create a player
+            final duration = await player.setUrl(// Load a URL
+                'https://pub-7de58e77bbdc477680e9cd9b28c977e3.r2.dev/Rick%20Roll%20Sound%20Effect.mp3'); // Schemes: (https: | file: | asset: )
+             await player.setSpeed(.5); 
+             player.play();
+            },
         ),
       ),
       Ink.image(
@@ -67,6 +91,11 @@ class _HomeScreenState extends State<HomeScreen> {
         child: InkWell(
           onTap: () async {
             print('a');
+            final player = AudioPlayer(); // Create a player
+            final duration = await player.setUrl(// Load a URL
+                'https://pub-7de58e77bbdc477680e9cd9b28c977e3.r2.dev/Rick%20Roll%20Sound%20Effect.mp3'); // Schemes: (https: | file: | asset: )
+             await player.setSpeed(.5); 
+             player.play();
           },
         ),
       ),
@@ -78,6 +107,11 @@ class _HomeScreenState extends State<HomeScreen> {
         child: InkWell(
           onTap: () async {
             print('b');
+            final player = AudioPlayer(); // Create a player
+            final duration = await player.setUrl(// Load a URL
+                'https://pub-7de58e77bbdc477680e9cd9b28c977e3.r2.dev/Rick%20Roll%20Sound%20Effect.mp3'); // Schemes: (https: | file: | asset: )
+            await player.setSpeed(.5); 
+             player.play();
           },
         ),
       ),

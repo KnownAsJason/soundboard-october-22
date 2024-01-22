@@ -26,7 +26,7 @@ class _HomeScreenState extends State<HomeScreen> {
             final duration = await player.setUrl(// Load a URL
             
                 'https://pub-7de58e77bbdc477680e9cd9b28c977e3.r2.dev/Rick%20Roll%20Sound%20Effect.mp3'); // Schemes: (https: | file: | asset: )
-             await player.setSpeed(.5); 
+             await player.setSpeed(1.5); 
             player.play();
                  
           },
@@ -41,9 +41,9 @@ class _HomeScreenState extends State<HomeScreen> {
           onTap: () async {
             print('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJBP5pyU3cNmd1LYQOz87cH03fPTSzZM0J4A&usqp=CAU');
             final player = AudioPlayer(); // Create a player
-            final duration = await player.setUrl(// Load a URL
-                'https://pub-7de58e77bbdc477680e9cd9b28c977e3.r2.dev/Rick%20Roll%20Sound%20Effect.mp3'); // Schemes: (https: | file: | asset: )
-             await player.setSpeed(.5); 
+            await player.setUrl('https://pub-7de58e77bbdc477680e9cd9b28c977e3.r2.dev/Rick%20Roll%20Sound%20Effect.mp3'); // Schemes: (https: | file: | asset: )
+             final duration = await player.setClip(start: Duration(seconds: 2), end: Duration(seconds: 4));
+               await player.setSpeed(1.5); 
             player.play();
            
           },
@@ -61,7 +61,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 final player = AudioPlayer(); // Create a player
             final duration = await player.setUrl(// Load a URL
                 'https://pub-7de58e77bbdc477680e9cd9b28c977e3.r2.dev/Rick%20Roll%20Sound%20Effect.mp3'); // Schemes: (https: | file: | asset: )
-             await player.setSpeed(.5); 
+             await player.setSpeed(1.5); 
              player.play();
           },
         ),
@@ -78,7 +78,7 @@ class _HomeScreenState extends State<HomeScreen> {
          final player = AudioPlayer(); // Create a player
             final duration = await player.setUrl(// Load a URL
                 'https://pub-7de58e77bbdc477680e9cd9b28c977e3.r2.dev/Rick%20Roll%20Sound%20Effect.mp3'); // Schemes: (https: | file: | asset: )
-             await player.setSpeed(.5); 
+             await player.setSpeed(1.5); 
              player.play();
             },
         ),
@@ -94,7 +94,7 @@ class _HomeScreenState extends State<HomeScreen> {
             final player = AudioPlayer(); // Create a player
             final duration = await player.setUrl(// Load a URL
                 'https://pub-7de58e77bbdc477680e9cd9b28c977e3.r2.dev/Rick%20Roll%20Sound%20Effect.mp3'); // Schemes: (https: | file: | asset: )
-             await player.setSpeed(.5); 
+             await player.setSpeed(1.2); 
              player.play();
           },
         ),
@@ -110,7 +110,7 @@ class _HomeScreenState extends State<HomeScreen> {
             final player = AudioPlayer(); // Create a player
             final duration = await player.setUrl(// Load a URL
                 'https://pub-7de58e77bbdc477680e9cd9b28c977e3.r2.dev/Rick%20Roll%20Sound%20Effect.mp3'); // Schemes: (https: | file: | asset: )
-            await player.setSpeed(.5); 
+            await player.setSpeed(1.5); 
              player.play();
           },
         ),
@@ -118,7 +118,7 @@ class _HomeScreenState extends State<HomeScreen> {
     ];
 
     return GridView.count(
-      crossAxisCount: 3,
+      crossAxisCount: 4,
       children: images,
     );
   }

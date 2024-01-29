@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:soundboard/ui/new_recording.dart';
 import 'package:soundboard/ui/tabs/faq.dart';
 import 'package:soundboard/ui/tabs/home.dart';
 import 'package:soundboard/ui/tabs/settings.dart';
@@ -63,6 +64,15 @@ class _DashboardPageState extends State<DashboardPage>
           FAQScreen(),
         ],
       ),
+      floatingActionButton: FloatingActionButton(
+  onPressed: () {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => NewRecording()),
+    );
+  },
+  child: Icon(Icons.add),
+),
       bottomNavigationBar: Material(
         color: Theme.of(context).colorScheme.inversePrimary,
         child: TabBar(

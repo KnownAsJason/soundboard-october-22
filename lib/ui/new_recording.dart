@@ -21,7 +21,10 @@ class _NewRecordingState extends State<NewRecording> {
         child: Column(
           children: [
             TextField(),
-            ElevatedButton(onPressed: () {}, child: Text("record"))
+            ElevatedButton(onPressed: () {}, child: Text("record")),
+            ElevatedButton(onPressed: () {}, child: Text("Stop")),
+            ElevatedButton(onPressed: () {}, child: Text("Save")),
+            ElevatedButton(onPressed: () {}, child: Text("play"))
           ],
         )
       ),
